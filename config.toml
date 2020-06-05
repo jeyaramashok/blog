@@ -1,0 +1,10 @@
+baseURL = "https://jeyaramashok.github.io/"
+languageCode = "en-us"
+title = "jeyaramashok.github.io"
+theme = "zen"
+defaultContentLanguage = "en"
+paginate = 10
+paginatePath = "page"
+
+[params]
+  logo = false
