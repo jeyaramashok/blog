@@ -1,3 +1,6 @@
 [submodule "themes/zen"]
 	path = themes/zen
 	url = https://github.com/frjo/hugo-theme-zen.git
+[submodule "public"]
+	path = public
+	url = https://github.com/jeyaramashok/jeyaramashok.github.io.git
