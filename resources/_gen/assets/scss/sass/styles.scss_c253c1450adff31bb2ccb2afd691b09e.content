@@ -5,7 +5,8 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   min-height: 100%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
   @media (min-width: 1111px) {
     html {
       font-size: 112.5%;
@@ -281,7 +282,7 @@ button,
     background: #666666;
     color: #fff; }
 
-[disabled].button,
+.button[disabled],
 button[disabled],
 [disabled][type='button'],
 [disabled][type='reset'],
@@ -292,15 +293,15 @@ button[disabled],
   border-color: #eeeeee;
   background-image: none;
   text-shadow: none; }
-  [disabled].button:hover,
+  .button[disabled]:hover,
   button[disabled]:hover,
   [disabled][type='button']:hover,
   [disabled][type='reset']:hover,
-  [disabled][type='submit']:hover, [disabled].button:focus,
+  [disabled][type='submit']:hover, .button[disabled]:focus,
   button[disabled]:focus,
   [disabled][type='button']:focus,
   [disabled][type='reset']:focus,
-  [disabled][type='submit']:focus, [disabled].button:active,
+  [disabled][type='submit']:focus, .button[disabled]:active,
   button[disabled]:active,
   [disabled][type='button']:active,
   [disabled][type='reset']:active,
@@ -494,14 +495,11 @@ html.js .js-hidden {
   .inverted-box ol:last-of-type {
     margin-bottom: 0; }
 
-.language-selector .navbar::before {
-  content: '';
-  background-image: url("../images/language-icon.png");
-  background-size: 24px;
-  background-repeat: no-repeat;
-  height: 24px;
-  width: 24px;
-  margin-right: 8px; }
+.language-selector {
+  display: flex; }
+
+.language-icon {
+  margin: 0 10px 0 0; }
 
 article > .content ul,
 aside ul {
@@ -727,8 +725,8 @@ article .tags ul {
   padding: 0; }
 
 article .tags li {
-  list-style-type: none;
-  padding-right: 0.28181818rem; }
+  padding-right: 0.28181818rem;
+  list-style-type: none; }
 
 article .content-dates {
   color: #666666;
@@ -852,5 +850,14 @@ figure.podcast audio {
 .js-submitted input:invalid,
 .js-submitted textarea:invalid {
   background-color: #fff0f0; }
+
+.anchor-link {
+  opacity: 0;
+  transition: all 130ms ease-in; }
+
+.anchor-header:focus .anchor-link, .anchor-header:hover .anchor-link {
+  opacity: .3; }
+  .anchor-header:focus .anchor-link:focus, .anchor-header:focus .anchor-link:hover, .anchor-header:hover .anchor-link:focus, .anchor-header:hover .anchor-link:hover {
+    opacity: 1; }
 
 /*# sourceMappingURL=styles.css.map */
