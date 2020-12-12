@@ -32,15 +32,11 @@ jobs:
         with:
           hugo-version: 'latest'
 
-      - name: setup git config
-        run: |
-          # setup the username and email.
-          git config user.name "GitHub Actions Bot"
-          git config user.email "<>"
-
       - name: commit
         run: |
           cd public
           git add .
+          git config --global user.name 'Jeyaram Ashokraj'
+          git config --global user.email 'jeyaramashok@users.noreply.github.com'
           git commit -m "rebuilding site $(date)"
           git push origin master
