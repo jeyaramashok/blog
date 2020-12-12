@@ -38,6 +38,9 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: ci/deploy.sh
+      - name: commit
+        run: |
+          cd public
+          git add .
+          git commit -m "rebuilding site $(date)"
+          git push origin master
