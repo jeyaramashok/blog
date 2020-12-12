@@ -42,5 +42,5 @@ jobs:
           git config --global user.name 'Github Actions Bot'
           git config --global user.email '<>'
           # Update origin with token
-          git remote set-url origin https://x-access-token:${{ secrets.API_TOKEN_GITHUB }}@github.com/jeyaramashok/jeyaramashok.github.io.git
+          git remote add origin https://jeyaramashok:${{ secrets.API_TOKEN_GITHUB }}@github.com/jeyaramashok/jeyaramashok.github.io.git
           git diff --quiet && git diff --staged --quiet || (git commit -m "rebuilding site $(date)"; git push origin master)
