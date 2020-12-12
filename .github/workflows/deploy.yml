@@ -32,6 +32,12 @@ jobs:
         with:
           hugo-version: 'latest'
 
+      - name: setup git config
+        run: |
+          # setup the username and email.
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: ci/deploy.sh
