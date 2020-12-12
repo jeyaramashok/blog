@@ -38,7 +38,7 @@ jobs:
       - name: Deploy
         run: |
           cd public
-          git remote set-url origin https://jeyaramashok:${{ secrets.GITHUB_TOKEN }}@https://github.com/jeyaramashok/jeyaramashok.github.io.git
+          git remote set-url origin https://jeyaramashok:${{ secrets.GITHUB_TOKEN }}@github.com/jeyaramashok/jeyaramashok.github.io.git
           git add .
           git config --global user.name 'Your Name'
           git config --global user.email 'your-username@users.noreply.github.com'
